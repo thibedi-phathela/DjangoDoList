@@ -1,8 +1,8 @@
 # ToDoList
-This is a TodoList web application built using the Django framework. It allows users to create, manage and organize their daily tasks.
+This is a TodoList web application developed using the Django framework. It allows users to create, manage and organize their daily tasks.
 
 
-![Alt text](<Imange.png>)
+![Alt text](AppImage.png)
 
 
 #
