@@ -8,6 +8,7 @@ This is a TodoList web application built using the Django framework. It allows u
 #
 # Getting started
 1.Clone the repository
+
     https://github.com/thibedi-phathela/DjangoDoList.git
 
 2.Create a virtual environment:  
