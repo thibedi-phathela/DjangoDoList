@@ -2,7 +2,8 @@
 This is a TodoList web application developed using the Django framework. It allows users to create, manage and organize their daily tasks.
 
 
-![Alt text](AppImage.png)
+![AppImage](https://github.com/thibedi-phathela/DjangoDoList/assets/134772391/f42ff2d3-173e-4d78-99bb-8597eb093814)
+
 
 
 #
