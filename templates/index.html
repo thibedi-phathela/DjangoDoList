@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<title>ToDoList</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+
+<div id="myDIV" class="header">
+  <h2 style="margin:5px">My Todo List</h2>
+  <form action="" method="POST">
+    {% csrf_token %}
+    <input type="text" name="title" id="myInput" placeholder="Task">
+    <input type="date" name="date" id="date" placeholder="Date">
+    <button type="submit" class="addBtn">Add</button>
+  </form>
+</div>
+
+<ul id="myUL">
+  {% for todo in todos reversed %}
+  <li>
+   <div class="todo-content">
+     <span class="title">{{todo.title | title}}</span>
+   </div>
+   <div class="date">{{todo.date}}</div>
+ 
+   <span class="close">
+     <a style="text-decoration: none; color: black;" href="done/{{todo.id}}">Done</a>
+   </span>
+ </li>
+   {% empty %}
+   <li>
+     <div class="no-jobs">You have no tasks at the moment.</div>
+   </li>
+   {% endfor %} 
+ </ul>
+ 
+</body>
+</html>
