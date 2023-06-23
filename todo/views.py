@@ -13,6 +13,17 @@ def index(request):
 
     return render(request, 'index.html', {'todos':todo},)
 
+def manage(request,pk):
+    todo = Todo.objects.get(id=pk)
+
+    if(request.method=="POST"):
+        todo.title = request.POST['title']
+        todo.date = request.POST['date']
+        todo.save()
+        return redirect('/')
+    
+    return render(request, 'manage.html', {'todos':todo})
+
 def done(request,pk):
     todo = Todo.objects.get(id=pk)
     todo.delete()

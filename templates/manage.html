@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<title>Edit Task</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div id="myDIV" class="header">
+  <h2 style="margin:5px">Manage Task</h2>
+  <form action="" method="POST">
+    {% csrf_token %}
+    <input type="text" name="title" id="myInput" placeholder="Task">
+    <input type="date" name="date" id="date" placeholder="Date">
+    <button type="submit" class="addBtn">Edit</button>
+  </form>
+</div>
+<li>
+    <div class="edit">You are currently managing a task</div>
+  </li>
+</body>
+</html>

@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-
 </head>
 <body>
 
@@ -27,11 +26,12 @@
    <div class="todo-content">
      <span class="title">{{todo.title | title}}</span>
    </div>
-   <div class="date">{{todo.date}}</div>
- 
+   <div class="date">Due:{{todo.date}}</div>
    <span class="close">
-     <a style="text-decoration: none; color: black;" href="done/{{todo.id}}">Done</a>
-   </span>
+    <a style="text-decoration: none; color: black;" href="done/{{ todo.id }}">Done</a>
+    <span class="separator">|</span>
+    <a style="text-decoration: none; color: black;" href="manage/{{ todo.id }}">Manage</a>
+  </span>
  </li>
    {% empty %}
    <li>
@@ -39,6 +39,5 @@
    </li>
    {% endfor %} 
  </ul>
- 
 </body>
 </html>
